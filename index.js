@@ -27,3 +27,18 @@ function validateInPutForm(){
  else{
      return true;
  };
+ function getGender(){
+    var gender = document.getElementsByName("gender")
+    if(gender[0].checked===true){
+        var gender ="male"
+    }
+
+  else if(gender[0].checked===true){
+      var gender ="female"
+  }
+ 
+ else{
+     return false;
+ }
+
+
