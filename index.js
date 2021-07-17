@@ -1,8 +1,15 @@
-var CC, YY, MM, d, dayValue;
+var CC, YY, MM, DD; d; dayValue;
 var dayNames= ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday","Friday","Saturday"];
 var maleNames= ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
 var femaleNames= ["Akosu", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
 
+function calculateDayValue(){
+   CC = parseInt
+   YY = parseInt
+   MM = parseInt
+   DD = parseInt
+   d =  ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) %7
+}
 /*---form validation---*/
 function validateInPutForm(){
     var gender = document.getElementsByName("gender");
