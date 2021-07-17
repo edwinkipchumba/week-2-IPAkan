@@ -69,7 +69,10 @@ switch(gender().getGender()){
      break;
     case "female":
         if(dayValue===1){
-         alert("you were born on" + dayNames[0] + " and your akan name is " + femaleNames[0] + "!")
+         alert("you were born on" + dayNames[0] + " and your akan name is " + femaleNames[0] + "!");
+        }
+        else if(dayValue===2){
+        alert("you were born on" + dayNames[1] + " and your akan name is " + femaleNames[1] + "!");
         }
 };
  }
