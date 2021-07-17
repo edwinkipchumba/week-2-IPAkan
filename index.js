@@ -44,3 +44,12 @@ function validateInPutForm(){
 
 /*---switch for akan names depending the gender---*/
 switch(gender().getGender()){
+    case "male":
+     if(dayValue===1){
+         alert("you were born on " +dayNames[0] + " and your akan name is " + maleNames[0] + "");
+     }  
+     else if(dayValue===2){
+         alert("you were born on" +dayNames[1] + " and your akan name is " + maleNames[1] + "");
+     }
+};
+ }
