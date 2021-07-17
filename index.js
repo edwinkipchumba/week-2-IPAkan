@@ -42,3 +42,5 @@ function validateInPutForm(){
  }
 
 
+/*---switch for akan names depending the gender---*/
+switch(gender().getGender()){
