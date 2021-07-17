@@ -1,6 +1,23 @@
+*body{
+    padding: 0px;
+    margin: 0px;
+}
+.Home{
+    background-image: url("assets/hom.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    opacity: 0.9px;
+    height: 500px;
+    background-color: cornsilk;
+}
+.nav-bar{
+    list-style: none;
 
-
-
+}
+.name-bar{
+    display: inline;
+}
 
 
 .page-footer{

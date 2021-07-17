@@ -5,47 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" media=all>
     <title>Akan Name</title>
+    <link rel="stylesheet" href="css/css/bootstrap.css" type="text/css">
     <link rel="stylesheet" href="styles.css" type="text/css">
 </head>
 <body>
     <div class="Home">
-     <body class="container-fluid" style="background-image: url(assets/form\ bg.jpeg);">
-       <div class="page-header">
-           <div class="logo-name">
+      <div  class="page-header_bar">
+         <div class="nav-bar">
+             <div class="name-bar">
                <p span style="color: blue; font-weight: bold;">Akan Naming</p>
-           </div>
-           <ul class="nav-bar">
-               <li><a href="#home">Home</a></li>
-               <li><a href="#about">About Naming</a></li>
-           </ul>
-       </div>
-      </body>
+           
+                <ul class="nav-bar">
+                   <li><a href="#home">Home</a></li>
+                   <li><a href="#about">About Naming</a></li>
+                </ul>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!--about naming starts-here-->
-    <div class="form-input">
+    <div class="About naming">
+       <div class="container-fluid" style="background-image: url(assets/form\ bg.jpeg);">
+     <div class="form-input">
         <h1 span style="background-color: aqua; color: black; font-weight: bold;">Welcome to Akan Names</h1>
         <h2 get id="get your name">Get Your Name Easy and Fast!</h2>
         <div class="form-container">
             <h2>Enter Your Details Here!</h2>
             <form name="inputform" class="form" onsubmit="validate();">
                 <div class="form-group">
-                    <label for="number">Year of birth</label>
+                    <label for="number">Year of birth</label><br>
                     <input type="number" class="form control" id="year" placeholder="Enter Your Year of birth e.g 15 for 2021 if born this year" name="Year">
                 </div>
                 <div class="form-group">
-                    <label for="Number">Month of Birth</label>
+                    <label for="Number">Month of Birth</label><br>
                     <input type="number" class="form control" id="month" placeholder="Enter your month of birth e.g 7 for July" name="Momth">
                 </div>
                 <div class="form-group">
-                    <label for="number">Date of birth</label>
+                    <label for="number">Date of birth</label><br>
                     <input type="number" class="form control" id="date" placeholder="Enter date of birth e.g 05 for July">
                 </div>
             </form>
         </div>
-    </div>
+     </div>
     <div class="form-group">
-        <label for="gender">Gender</label>
+        <label for="gender">Gender</label><br>
         <div class="form-check inline">
             <label for="form-check">Male</label>
             <input type="radio" class="form-check input" id="male" name="male">
@@ -56,10 +60,24 @@
         </div>
     </div>
     <div>
-        <button type="button" class="btn btn-success">success</button>
+        <button type="button" class="btn btn-success" onclick="findName();">Get Name</button>
     </div>
+  </div>
+  </div>
+    <div class="card-deck">
+        <div class="card">
+            <div class="card-body text center">
+               <p>Akan names are derived from Ghanian culture.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body text">
+                <p>Frequently in Ghana, children are given their first name as a 'day name'<br> which corresponds to the day in the week they were born.</p>
+            </div>
+        </div>
+    </div>
+        
     
-
 
 
     <div class="footer">
