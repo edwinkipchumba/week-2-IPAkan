@@ -4,34 +4,32 @@ var maleNames= ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
 var femaleNames= ["Akosu", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
 
 function calculateDayValue(){
-   CC = parseInt(year.subString(0,2))
-   YY = parseInt(year.subString(2,4))
+   CC = parseInt(year.toString())
+   YY = parseInt(year.toString())
    MM = parseInt(document.getElementById("month").value);
    DD = parseInt(document.getElementById("date").value);
    d =  ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) %7
+console.log(d);
+return (math.floor(d));
 }
 /*---form validation---*/
 function validate(){
-    var genders = document.getElementsByName("gender");
-    if(document.inPutForm.year.value=="" || document.inPutForm.year.value.length !=4 || document.inPutForm.year.value>2300 || document.inPutForm.year.value<=1800){
+    var gender = document.getElementsByName("gender");
+    if(document.myForm.year.value>2300 || document.myForm.year.value<=1800) {
         alert("please provide a valid year e.g 2021");
-        document.inPutForm.year.focus();
+        document.myForm.year.focus();
         return false;
     }
-
-};
-  else if(document.inPutForm.month.value=="" || isNaN(document.inPutForm.month.value) || 
-  document.inPutForm.month.value.length !=2 || document.inPutForm.month.value>12 || document.inPutForm.month.value<=0){
+else if(document.myForm.month.value>12 || document.myForm.month.value<=0){
      alert("please provide a valid month from 1 to 12");
-     document.inPutForm.month.focus();
+     document.myForm.month.focus();
      return false;
  }
- else if(document.inPutForm.day.value=="" || isNaN(document.inPutForm.day.value) || 
- document.inPutForm.day.value.length !=2 || document.inPutForm.day.value>31 || document.inPutForm.day.value<=0){
+ else if(document.myForm.day.value>31 || document.myForm.day.value<=0){
      alert("please provide a valid days from 1 to 31");
-     document.inPutForm.day.focus();
+     document.myForm.day.focus();
      return false;
- };
+ }
  else if(gender[0].checked===false && gender[1].checked===false){
      alert("you must select either male or female gender");
     return false;
@@ -39,6 +37,7 @@ function validate(){
  else{
      return true;
  };
+}
  function getGender(){
     var gender = document.getElementsByName("gender")
     if(gender[0].checked===true){
@@ -52,9 +51,7 @@ function validate(){
  else{
      return false;
  }
-
-
-/*---switch for akan names depending the gender---*/
+ 
 switch(gender().getGender()){
     case "male":
      if(dayValue===1){
@@ -105,7 +102,7 @@ switch(gender().getGender()){
         default:   
     };
  }
- function findName(){
+ function validate(){
      dayValue=calculateDayValue();
      getGender();
  }

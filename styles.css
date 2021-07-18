@@ -12,7 +12,7 @@
     background-color: cornsilk;
 }
 .about-naming{
-    background-image: url("assets/bgform1.jpg");
+    background-image: url("assets/white.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -20,12 +20,21 @@
     font-size: larger;
     opacity: 0.9px;
 }
+.inputform[type="number"],[type="radio"],[type="placeholder"]{
+    width: 100%;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 3px 0px;
+    border-radius: 4px;
+    border: 2px 2px 5px solid black
+}
 .gender-list_check{
-    color: whitesmoke;
+    padding-top: 10px;
     text-shadow: 2px 2px 5px black;
 }
 .card-deck{
     display: flex;
+    padding-top: 20px;
 }
 .vl{
     height: 100px;
