@@ -1,58 +1,48 @@
-var CC, YY, MM, DD, d, dayValue;
 var dayNames= ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday","Friday","Saturday"];
 var maleNames= ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
 var femaleNames= ["Akosu", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
-
-function calculateDayValue(){
-   CC = parseInt(year.toString())
-   YY = parseInt(year.toString())
-   MM = parseInt(document.getElementById("month").value);
-   DD = parseInt(document.getElementById("date").value);
-   d =  ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) %7
-console.log(d);
-return (math.floor(d));
-}
-/*---form validation---*/
-function validate(){
-    var gender = document.getElementsByName("gender");
-    if(document.myForm.year.value>2300 || document.myForm.year.value<=1800) {
-        alert("please provide a valid year e.g 2021");
-        document.myForm.year.focus();
+var gender = document.getElementsByName("gender");
+var CC = document.getElementById("century");
+var YY = document.getElementById("year");
+var MM = document.getElementById("month").value;
+var DD = document.getElementById("date").value;
+var d = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) %7
+function main(){
+    if(CC.value==''){
+        alert('Input a valid century value')
         return false;
     }
-else if(document.myForm.month.value>12 || document.myForm.month.value<=0){
-     alert("please provide a valid month from 1 to 12");
-     document.myForm.month.focus();
-     return false;
- }
- else if(document.myForm.day.value>31 || document.myForm.day.value<=0){
-     alert("please provide a valid days from 1 to 31");
-     document.myForm.day.focus();
-     return false;
- }
- else if(gender[0].checked===false && gender[1].checked===false){
-     alert("you must select either male or female gender");
-    return false;
- }
- else{
-     return true;
- };
-}
- function getGender(){
-    var gender = document.getElementsByName("gender")
-    if(gender[0].checked===true){
-        var gender ="male"
+    else if(YY.value>23 || YY.value<18){
+        alert('please provide a valid year e.g 21')
+        return false;
     }
-
-  else if(gender[0].checked===true){
-      var gender ="female"
-  }
+    else if(MM.value>12 || MM.value<=0){
+        alert('please input a valid month')
+        return false;
+    }
+    else if(DD.value>31 || DD.value<=0){
+        alert('please input a valid number of days')
+        return false;
+    }
+    else if (d.dayValue){
+        dayValue=calculateDayValue();
+        getGender();
+         }
+    else if(gender[0].checked==true){
+        gender="male"
+    }
+    else if(gender[1].checked==true){
+        gender="female"
+    }
+    else if(gender[0].checked==false && gender[1].checked==false){
+        alert("you must select male or female");
+         return false;
+    }
+    else{
+        return true;
+    }
  
- else{
-     return false;
- }
- 
-switch(gender().getGender()){
+switch(gender){
     case "male":
      if(dayValue===1){
          alert("you were born on " + dayNames[0] + " and your akan name is " + maleNames[0] + "!");
@@ -102,7 +92,4 @@ switch(gender().getGender()){
         default:   
     };
  }
- function validate(){
-     dayValue=calculateDayValue();
-     getGender();
- }
+ 

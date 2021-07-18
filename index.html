@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,70 +10,80 @@
     <link rel="stylesheet" href="uikit/css/uikit.css">
     <link rel="stylesheet" href="styles.css" type="text/css">
 </head>
+
 <body>
     <div class="Home">
-      <div  class="page-header_bar">
-         <div class="nav-bar">
-             <div class="name-bar">
-               <p span style="color: blue; font-weight: bold;"><strong>AKAN NAMING<strong></p>
+        <div class="page-header_bar">
+            <div class="nav-bar">
+                <div class="name-bar">
+                    <p span style="color: blue; font-weight: bold;"><strong>AKAN NAMING<strong></p>
+                </div>
             </div>
         </div>
-      </div>
     </div>
 
     <!--about naming starts-here-->
-     <div class="about-naming">
-      <div class="form-input">
-        <h1 span style="background-color: aqua; color: black; font-weight: bold;">Welcome to Akan Names</h1>
-        <h2 get id="get your name">Get Your Name Easy and Faster!</h2>
-        <div class="form-container">
-            <h3>Enter Your Details Here!</h3>
-            <form name="myForm" class="form" onsubmit="validate();">
-                <div class="form-group">
-                    <label for="number">Year of Birth</label><br>
-                    <input type="number" class="form control" id="year"placeholder="Enter Your Year of birth e.g  2021 if born this year" name="Year">
-                </div>
-                <div class="form-group">
-                    <label for="Number">Month of Birth</label><br>
-                    <input type="number" class="form control" id="month" placeholder="Enter your month of birth e.g 7 for July" name="Month">
-                </div>
-                 <div class="form-group">
-                    <label for="number">Date of Birth</label><br>
-                    <input type="number" class="form control" id="date" placeholder="Enter date of birth e.g 05 " name="date">
-                </div>
-            
+    <div class="about-naming">
+        <div class="form-input">
+            <h1 span style="background-color: aqua; color: black; font-weight: bold;">Welcome to Akan Names</h1>
+            <h2 get id="get your name">Get Your Name Easy and Faster!</h2>
+            <div class="form-container">
+                <h3>Enter Your Details Here!</h3>
+                <form name="main" class="form" onsubmit="validate();">
+                    <div class="form-group">
+                        <label for="number">Century</label><br>
+                        <input type="number" class="form control" id="century"
+                            placeholder="your century e.g 20" name="century">
+                    </div>
+                    <div class="form-group">
+                        <label for="number">Year of Birth</label><br>
+                        <input type="number" class="form control" id="year"
+                            placeholder="your year e.g 21 " name="Year">
+                    </div>
+                    <div class="form-group">
+                        <label for="Number">Month of Birth</label><br>
+                        <input type="number" class="form control" id="month"
+                            placeholder="your month e.g 07 " name="Month">
+                    </div>
+                    <div class="form-group">
+                        <label for="number">Date of Birth</label><br>
+                        <input type="number" class="form control" id="date" placeholder="your date e.g 05 " name="date">
+                    </div>
+
+            </div>
         </div>
-     </div>
         <div class="form-group">
             <div class="check-gender">
                 <div class="gender-list_check">
-                  <label for="gender">Gender</label><br>
-                   <div class="form-check inline">
-                       <label for="form-check">Male</label>
-                         <input type="radio" class="form-check input" id="male" name="gender" >
+                    <label for="gender">Gender</label><br>
+                    <div class="form-check inline">
+                        <label for="form-check">Male</label>
+                        <input type="radio" class="form-check input" id="male" name="gender">
                     </div>
-                        <div class="form-group">
-                         <label for="form-check">Female</label>
-                         <input type="radio" class="form-check input" id="female" name="gender" >
-                        </div>
+                    <div class="form-group">
+                        <label for="form-check">Female</label>
+                        <input type="radio" class="form-check input" id="female" name="gender">
+                    </div>
                 </div>
             </div>
         </div>
-            <div>
-              <button type="submit" class="btn btn-success" onclick="validate()">Get Name</button>
-           </div>
+        <div>
+            <button type="submit" class="btn btn-success">Get Name</button>
+        </div>
         </form>
-  </div>
-  </div>
+    </div>
+    </div>
     <div class="card-deck">
         <div class="card">
             <div class="card-body text center">
-               <p>Akan names are derived from Ghanian culture.<br> <a href="https://en.wikipedia.org/wiki/Akan_names">read more about Akan</a></p>
+                <p>Akan names are derived from Ghanian culture.<br> <a
+                        href="https://en.wikipedia.org/wiki/Akan_names">read more about Akan</a></p>
             </div>
         </div>
         <div class="card">
             <div class="card-body text">
-                <p>Frequently in Ghana, children are given their first name as a 'day name'<br> which corresponds to the day in the week they were born.</p>
+                <p>Frequently in Ghana, children are given their first name as a 'day name'<br> which corresponds to the
+                    day in the week they were born.</p>
             </div>
         </div>
         <div class="card">
@@ -81,23 +92,25 @@
             </div>
         </div>
     </div>
-      <div class="footer">
-          <div class="page-footer">
-              <div class="class-footer-header">
-                  <div class="terms">
-                      <h3>about naming</h3>
-                      <h4>Akan names are derived from Ghanian culture<br>Childrn are given names a 'day name'<br>names are given based on gender</h4>
-                  </div>
-                  <div class="vl"></div>
-                  <div class="term-c">
-                      <h3>Terms and condition</h3>
-                  </div>
-              </div>
-              <div class="copyrigth">
-                  <h4>Copyrigth &copy2021, Kolem Edwin</h4>
-              </div>
-          </div>
-      </div>
-      <script src="index.js"></script> 
+    <div class="footer">
+        <div class="page-footer">
+            <div class="class-footer-header">
+                <div class="terms">
+                    <h3>about naming</h3>
+                    <h4>Akan names are derived from Ghanian culture<br>Childrn are given names a 'day name'<br>names are
+                        given based on gender</h4>
+                </div>
+                <div class="vl"></div>
+                <div class="term-c">
+                    <h3>Terms and Conditions</h3>
+                </div>
+            </div>
+            <div class="copyrigth">
+                <h4>Copyrigth &copy2021, Kolem Edwin</h4>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
 </body>
+
 </html>
