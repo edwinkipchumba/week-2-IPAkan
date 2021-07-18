@@ -3,25 +3,38 @@
     margin: 0px;
 }
 .Home{
-    background-image: url("assets/hom.jpg");
+    background-image: url("assets/home.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: auto;
+    background-size: cover;
     opacity: 0.9px;
-    height: 500px;
+    height: 300px;
     background-color: cornsilk;
 }
-.nav-bar{
-    list-style: none;
-
+.about-naming{
+    background-image: url("assets/bgform1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    font-size: larger;
+    opacity: 0.9px;
 }
-.name-bar{
-    display: inline;
-}
-
 
 .page-footer{
     background-color: black;
     text-align: center;
     color: #fff;
+}
+@media screen and (max-width: 600px){
+    .overlay{
+        margin-left: 1px;
+        margin-right: 1px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .overlay{
+        margin-left: 1px;
+        margin-right: 1px;
+    }
 }

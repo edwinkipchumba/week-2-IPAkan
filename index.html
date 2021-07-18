@@ -15,19 +15,14 @@
              <div class="name-bar">
                <p span style="color: blue; font-weight: bold;">Akan Naming</p>
            
-                <ul class="nav-bar">
-                   <li><a href="#home">Home</a></li>
-                   <li><a href="#about">About Naming</a></li>
-                </ul>
-          </div>
+            </div>
         </div>
       </div>
     </div>
 
     <!--about naming starts-here-->
-    <div class="About naming">
-       <div class="container-fluid" style="background-image: url(assets/form\ bg.jpeg);">
-     <div class="form-input">
+    <div class="about-naming">
+      <div class="form-input">
         <h1 span style="background-color: aqua; color: black; font-weight: bold;">Welcome to Akan Names</h1>
         <h2 get id="get your name">Get Your Name Easy and Fast!</h2>
         <div class="form-container">
@@ -41,27 +36,31 @@
                     <label for="Number">Month of Birth</label><br>
                     <input type="number" class="form control" id="month" placeholder="Enter your month of birth e.g 7 for July" name="Momth">
                 </div>
-                <div class="form-group">
+                 <div class="form-group">
                     <label for="number">Date of birth</label><br>
                     <input type="number" class="form control" id="date" placeholder="Enter date of birth e.g 05 for July">
                 </div>
             </form>
         </div>
      </div>
-    <div class="form-group">
-        <label for="gender">Gender</label><br>
-        <div class="form-check inline">
-            <label for="form-check">Male</label>
-            <input type="radio" class="form-check input" id="male" name="male">
-        </div>
         <div class="form-group">
-            <label for="form-check">Female</label>
-            <input type="radio" class="form-check input" id="female" name="female">
+            <div class="check-gender">
+                <div class="gender-list_check">
+                  <label for="gender">Gender</label><br>
+                   <div class="form-check inline">
+                       <label for="form-check">Male</label>
+                         <input type="radio" class="form-check input" id="male" name="gender">
+                    </div>
+                        <div class="form-group">
+                         <label for="form-check">Female</label>
+                         <input type="radio" class="form-check input" id="female" name="gender">
+                        </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <div>
-        <button type="button" class="btn btn-success" onclick="findName();">Get Name</button>
-    </div>
+            <div>
+              <button type="button" class="btn btn-success" onclick="findName();">Get Name</button>
+           </div>
   </div>
   </div>
     <div class="card-deck">
@@ -81,10 +80,10 @@
 
 
     <div class="footer">
-      <footer class="page-footer">
-       <div>Terms and condition</div>
-       <div class="copyrigth text">&copy 2021, Kolem Edwin</div>
-     </footer> 
+        <footer class="page-footer">
+          <div>Terms and condition</div>
+            <div class="copyrigth text">&copy 2021, Kolem Edwin</div>
+        </footer> 
     </div>
    <script src="index.js"></script> 
 </body>
