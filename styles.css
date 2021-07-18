@@ -20,11 +20,39 @@
     font-size: larger;
     opacity: 0.9px;
 }
+.gender-list_check{
+    color: whitesmoke;
+    text-shadow: 2px 2px 5px black;
+}
+.card-deck{
+    display: flex;
+}
+.vl{
+    height: 100px;
+    border-right: 2px solid white;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 180px;
+}
 
 .page-footer{
     background-color: black;
     text-align: center;
     color: #fff;
+}
+.terms{
+    text-align: left;
+    margin-left: 1px;
+    font-size: 2px;
+    
+}
+.term-c{
+    text-align: right;
+    margin-left: 250px;
+}
+.class-footer-header{
+    display: flex;
+    flex-direction: row;
 }
 @media screen and (max-width: 600px){
     .overlay{
