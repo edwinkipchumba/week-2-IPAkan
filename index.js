@@ -1,4 +1,3 @@
-
 var dayNames= ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday","Friday","Saturday"];
 var maleNames= ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
 var femaleNames= ["Akosu", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
@@ -10,13 +9,13 @@ var MM = document.getElementById("month").value;
 var DD = document.getElementById("date").value;
 var d = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) %7
 
-function main(){
+function validate(){
     if(CC==''){
         alert('Input a valid century value')
         CC.focus();
         return false;
     }
-    else if(YY>23 && YY<18){
+    else if(YY>2300 && YY<1800){
         alert('please provide a valid year e.g 21')
         return false;
     }

@@ -29,21 +29,25 @@
             <h2 get id="get your name">Get Your Name Easy and Faster!</h2>
             <div class="form-container">
                 <h3>Enter Your Details Here!</h3>
-                <form name="main" class="form">
+
+
+                <form name="mainer" class="form" onsubmit="validate();">
+
                     <div class="form-group">
                         <label for="number">Century</label><br>
-                        <input type="number" class="form control" id="century" placeholder="your century e.g 20"
-                            name="century">
+                        <input type="number" class="form control" id="century" placeholder="your century e.g 20" name="century">
                     </div>
+
                     <div class="form-group">
                         <label for="number">Year of Birth</label><br>
                         <input type="number" class="form control" id="year" placeholder="your year e.g 21 " name="Year">
                     </div>
+
                     <div class="form-group">
                         <label for="Number">Month of Birth</label><br>
-                        <input type="number" class="form control" id="month" placeholder="your month e.g 07 "
-                            name="Month">
+                        <input type="number" class="form control" id="month" placeholder="your month e.g 07 " name="Month">
                     </div>
+
                     <div class="form-group">
                         <label for="number">Date of Birth</label><br>
                         <input type="number" class="form control" id="date" placeholder="your date e.g 05 " name="date">
@@ -54,20 +58,26 @@
         <div class="form-group">
             <div class="check-gender">
                 <div class="gender-list_check">
+
+
                     <label for="gender">Gender</label><br>
                     <div class="form-check inline">
+
+
                         <label for="form-check">Male</label>
-                        <input type="radio" class="form-check input" id="gender" name="gender">
+                        <input type="radio" class="form-check input" id="gender" value="male" name="gender">
                     </div>
+
+
                     <div class="form-group">
                         <label for="form-check">Female</label>
-                        <input type="radio" class="form-check input" id="gender" name="gender">
+                        <input type="radio" class="form-check input" id="gender" value="female" name="gender">
                     </div>
                 </div>
             </div>
         </div>
         <div>
-            <button type="submit" class="btn btn-success" onclick="main()">Get Name</button>
+            <button type="submit" class="btn btn-success">Get Name</button>
         </div>
         </form>
     </div>
