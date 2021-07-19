@@ -1,34 +1,32 @@
 var dayNames= ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday","Friday","Saturday"];
 var maleNames= ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
 var femaleNames= ["Akosu", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
-var gender = document.getElementByName("gender");
-var CC = document.getElementById("century");
-var YY = document.getElementById("year");
+
+var gender = document.getElementById("gender").value;
+var CC = document.getElementById("century").value;
+var YY = document.getElementById("year").value;
 var MM = document.getElementById("month").value;
 var DD = document.getElementById("date").value;
 var d = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) %7
-var main = document.getElementByName("main")
-function main(){
-    if(CC.value=='' || CC.value==null){
+
+function validate(){
+    if(CC==''){
         alert('Input a valid century value')
+        CC.focus();
         return false;
     }
-    else if(YY.value>23 || YY.value<18){
+    else if(YY>2300 && YY<1800){
         alert('please provide a valid year e.g 21')
         return false;
     }
-    else if(MM.value>12 || MM.value<=0){
+    else if(MM>12 && MM<=0){
         alert('please input a valid month')
         return false;
     }
-    else if(DD.value>31 || DD.value<=0){
+    else if(DD>31 && DD<=0){
         alert('please input a valid number of days')
         return false;
     }
-    else if (d.dayValue){
-        dayValue=calculateDayValue();
-        getGender();
-         }
     else if(gender[0].checked==true){
         gender="male"
     }
@@ -42,6 +40,7 @@ function main(){
     else{
         return true;
     }
+    alert(d)
  
 switch(gender){
     case "male":
