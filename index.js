@@ -1,14 +1,15 @@
 var dayNames= ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday","Friday","Saturday"];
 var maleNames= ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
 var femaleNames= ["Akosu", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
-var gender = document.getElementsByName("gender");
+var gender = document.getElementByName("gender");
 var CC = document.getElementById("century");
 var YY = document.getElementById("year");
 var MM = document.getElementById("month").value;
 var DD = document.getElementById("date").value;
 var d = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) %7
+var main = document.getElementByName("main")
 function main(){
-    if(CC.value==''){
+    if(CC.value=='' || CC.value==null){
         alert('Input a valid century value')
         return false;
     }
